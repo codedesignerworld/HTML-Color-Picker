@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <title>HTML Color Picker</title>
+  <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+  <div id="container">
+    <h2 for="colorpicker">Color Picker</h2>
+    <input type="color" id="colorpicker" onchange="mycolor()" value="#000000">   
+    <p id="demo">#0000FF</p>
+  </div>
+
+  <script type="text/javascript">
+    function mycolor() {
+      var x = document.getElementById("colorpicker").value;
+      document.getElementById("demo").innerHTML = x;
+      document.getElementById("container").style.boxShadow = "0px 0px 8px "+x;
+    }
+  </script>
+</body>
+</html>
